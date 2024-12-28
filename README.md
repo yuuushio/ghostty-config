@@ -1,2 +1,3 @@
 # ghostty-config
-decent config, for now.
+
+bye tmux
