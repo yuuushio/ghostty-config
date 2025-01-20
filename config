@@ -21,7 +21,7 @@ adjust-cell-height = 8
 
 adjust-cursor-thickness = 2
 
-mouse-scroll-multiplier = 2
+mouse-scroll-multiplier = 1.5
 
 ############
 # WIN-DEFS #
@@ -32,11 +32,18 @@ window-padding-y = 15
 window-padding-color = background
 window-theme = ghostty
 window-decoration = false
-window-save-state = always
+# only works on mac atm
+window-save-state = always 
+working-directory = inherit
+window-inherit-working-directory = true
+
+unfocused-split-opacity = .9
 
 # This is a bit annoying atm; would be nice if the mouse didn't interfere if you weren't using it - something like dwm.
 focus-follows-mouse = false
 shell-integration = zsh
+
+confirm-close-surface = false
 
 #############
 # FONT-DEFS #
@@ -62,6 +69,7 @@ font-size = 13
 keybind = all:unconsumed:alt+r=reload_config
 
 keybind = ctrl+z=close_surface
+keybind = ctrl+z=close_window
 
 keybind = ctrl+x=ignore
 
@@ -111,7 +119,7 @@ keybind = alt+n=previous_tab
 keybind = alt+m=next_tab
 keybind = alt+p=last_tab
 
-keybind = alt+c=close_window
+# keybind = alt+c=close_window
 
 # split
 keybind = alt+:=new_split:right
